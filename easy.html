@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+  <head><title>quiz</title></head>
+  <div id="loop"><ol id="ques"></ol><br><br>
+  <ol id="q1"></ol><br><ol id="q2"></ol><br><ol id="q3"></ol><br><ol id="q4"></ol></div>
+  <script>
+    function activate(){
+     return fetch("countries.json")
+    .then(r => r.json())
+    .then(data => {
+      const q = data[Math.floor(Math.random() * data.length)];
+      return `What is the capital of ${q.country}?`;
+    });
+}
+                                                                
+  </script>
+  
+</html>
