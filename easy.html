@@ -13,9 +13,6 @@
       return `What is the capital of ${q.country}?`;
     });
     }  
-    activate1().then(question => {
-    document.getElementById("ques").innerHTML = `<li>${question}</li>`;
-    });
     function activate2(){
      return fetch("country-list.json")
     .then(r => r.json())
@@ -24,6 +21,10 @@
       return `${q.capital}?`;
     });
     }  
+    while(data in list){
+    activate1().then(question => {
+    document.getElementById("ques").innerHTML = `<li>${question}</li>`;
+    });
      activate2().then(option => {
     document.getElementById("op1").innerHTML = `<li>${option}</li>`;
     });
@@ -36,7 +37,7 @@
       activate2().then(option => {
     document.getElementById("op4").innerHTML = `<li>${option}</li>`;
     });
-    
+    }
     
   </script>
   </body>
