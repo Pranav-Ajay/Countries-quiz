@@ -6,7 +6,7 @@
   <ol id="q1"></ol><br><ol id="q2"></ol><br><ol id="q3"></ol><br><ol id="q4"></ol></div>
   <script>
     function activate(){
-     return fetch("countries.json")
+     return fetch("country-list.json")
     .then(r => r.json())
     .then(data => {
       const q = data[Math.floor(Math.random() * data.length)];
