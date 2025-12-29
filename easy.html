@@ -12,7 +12,10 @@
       const q = data[Math.floor(Math.random() * data.length)];
       return `What is the capital of ${q.country}?`;
     });
-    }                                                               
+    }  
+    activate().then(question => {
+    document.getElementById("ques").innerHTML = `<li>${question}</li>`;
+    });
   </script>
   </body>
   
