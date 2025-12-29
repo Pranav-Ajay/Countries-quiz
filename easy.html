@@ -35,6 +35,58 @@
    });
   });
 
+  function evaluate1(){
+    let ans1=document.getElementById("op1").innerText;
+    activate1().then(obj => {
+     console.log(obj.correct);
+    });
+    if(ans1===obj.correct){
+      alert("Right answer");
+         }
+    else{
+      alert("wrong answer");
+             }
+         }
+
+  function evaluate2(){
+    let ans2=document.getElementById("op2").innerText;
+    activate1().then(obj => {
+     console.log(obj.correct);
+   });
+    if(ans2===obj.correct){
+       alert("Right answer");
+             }
+    else{
+       alert("wrong answer");
+             }
+         }
+
+  function evaluate3(){
+    let ans3=document.getElementById("op3").innerText;
+     activate1().then(obj => {
+     console.log(obj.correct);
+   });
+    if(ans3===obj.correct){
+      alert("Right answer");
+             }
+    else{
+      alert("wrong answer");
+             }
+         }
+
+  function evaluate4(){
+    let ans4=document.getElementById("op4").innerText;
+     activate1().then(obj => {
+     console.log(obj.correct);
+   });
+     if(ans4===obj.correct){
+      alert("Right answer");
+             }
+    else{
+      alert("wrong answer");
+             }
+         }
+    
  
   </script>
   </body>
