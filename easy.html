@@ -35,6 +35,20 @@
    });
   });
 
+    function evaluate(){
+     document.getElementById("ques").innerText =question;
+
+     const buttons = ["op1", "op2", "op3", "op4"];
+     const correctIndex = Math.floor(Math.random() * 4);
+     buttons.forEach((id, i) => {
+     if (i==correctIndex) {
+      alert("Right Answer");
+     } else {
+      alert("Incorrect answer");
+         }
+    }
+   }
+
     
   </script>
   </body>
