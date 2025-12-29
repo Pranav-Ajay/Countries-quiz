@@ -5,8 +5,8 @@
   <div id="loop"><ol><li id="ques"></li></ol><br><br>
   <ol><li id="q1"><button onclick="evaluate1()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate2()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate3()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate4()" id="op4"></button></li></ol></div>
   <script>
-   function activate1() {
-  return fetch("country-list.json")
+  function activate1() {
+    return fetch("country-list.json")
     .then(r => r.json())
     .then(data => {
       const q = data[Math.floor(Math.random() * data.length)];
@@ -15,10 +15,10 @@
         correct: q.capital,
         data: data
       };
-    });
-   }
+     });
+    }
 
-    activate1().then(obj => {
+   activate1().then(obj => {
    document.getElementById("ques").innerText = obj.question;
 
     const buttons = ["op1", "op2", "op3", "op4"];
@@ -35,47 +35,47 @@
    });
   });
 
-    function evaluate1(){
-      let ans1=document.getElementById("op1").innerText;
-      activate1();
-      if(ans1===q.capital){
-       alert("Right answer);
+ function evaluate1(){
+    let ans1=document.getElementById("op1").innerText;
+    activate1();
+    if(ans1===q.capital){
+      alert("Right answer);
          }
-      else{
+    else{
+      alert("wrong answer);
+             }
+         }
+
+  function evaluate2(){
+    let ans2=document.getElementById("op2").innerText;
+    activate1();
+    if(ans2===q.capital){
+       alert("Right answer);
+             }
+    else{
        alert("wrong answer);
              }
          }
 
-     function evaluate2(){
-      let ans2=document.getElementById("op2").innerText;
-      activate1();
-      if(ans2===q.capital){
-       alert("Right answer);
+  function evaluate3(){
+    let ans3=document.getElementById("op3").innerText;
+    activate1();
+    if(ans3===q.capital){
+      alert("Right answer);
              }
-      else{
-       alert("wrong answer);
-             }
-         }
-
-     function evaluate3(){
-      let ans3=document.getElementById("op3").innerText;
-      activate1();
-      if(ans3===q.capital){
-       alert("Right answer);
-             }
-      else{
-       alert("wrong answer);
+    else{
+      alert("wrong answer);
              }
          }
 
-      function evaluate4(){
-       let ans4=document.getElementById("op4").innerText;
-       nactivate1();
-      if(ans4===q.capital){
-       alert("Right answer);
+  function evaluate4(){
+    let ans4=document.getElementById("op4").innerText;
+     nactivate1();
+     if(ans4===q.capital){
+      alert("Right answer);
              }
-      else{
-       alert("wrong answer);
+    else{
+      alert("wrong answer);
              }
          }
     
