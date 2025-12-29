@@ -5,7 +5,6 @@
   <div id="loop"><ol><li id="ques"></li></ol><br><br>
   <ol><li id="q1"><button onclick="evaluate1()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate2()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate3()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate4()" id="op4"></button></li></ol></div>
   <script>
-  const q;
   function activate1() {
     return fetch("country-list.json")
     .then(r => r.json())
