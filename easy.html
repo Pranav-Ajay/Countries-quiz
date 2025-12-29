@@ -3,7 +3,7 @@
   <head><title>quiz</title></head>
   <body>
   <div id="loop"><ol><li id="ques"></li></ol><br><br>
-  <ol><li id="q1"><button onclick="evaluate()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate()" id="op4"></button></li></ol></div>
+  <ol><li id="q1"><button onclick="evaluate1()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate2()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate3()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate4()" id="op4"></button></li></ol></div>
   <script>
    function activate1() {
   return fetch("country-list.json")
@@ -58,7 +58,7 @@
          }
 
      function evaluate3(){
-      let ans3=document.getElementById("op13").innerText =question;
+      let ans3=document.getElementById("op3").innerText;
       activate1();
       if(ans3===q.capital){
        alert("Right answer);
@@ -69,7 +69,7 @@
          }
 
       function evaluate4(){
-       let ans4=document.getElementById("op1").innerText =question;
+       let ans4=document.getElementById("op4").innerText;
        nactivate1();
       if(ans4===q.capital){
        alert("Right answer);
