@@ -3,7 +3,7 @@
   <head><title>quiz</title></head>
   <body>
   <div id="loop"><ol><li id="ques"></li></ol><br><br>
-  <ol><li id="q1"><button id="op1"></button></li><br><li id="q2"><button id="op2"></button></li><br><li id="q3"><button id="op3"></button></li><br><li id="q4"><button id="op4"></button></li></ol></div>
+  <ol><li id="q1"><button onclick="evaluate()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate()" id="op4"></button></li></ol></div>
   <script>
    function activate1() {
   return fetch("country-list.json")
@@ -34,6 +34,22 @@
     }
    });
   });
+
+  function evaluate(){
+     document.getElementById("ques").innerText = obj.question;
+
+    const buttons = ["op1", "op2", "op3", "op4"];
+    const correctIndex = Math.floor(Math.random() * 4);
+    buttons.forEach((id, i) => {
+    if (i === correctIndex) {
+      alert("Right Answer");
+     } else {
+      const randomItem =
+        alert("Incorrect answer");
+         }
+     });
+   });
+    
   </script>
   </body>
   
