@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head><title>quiz</title></head>
+  <body>
   <div id="loop"><ol id="ques"></ol><br><br>
   <ol id="q1"></ol><br><ol id="q2"></ol><br><ol id="q3"></ol><br><ol id="q4"></ol></div>
   <script>
@@ -11,8 +12,8 @@
       const q = data[Math.floor(Math.random() * data.length)];
       return `What is the capital of ${q.country}?`;
     });
-}
-                                                                
+    }                                                               
   </script>
+  </body>
   
 </html>
