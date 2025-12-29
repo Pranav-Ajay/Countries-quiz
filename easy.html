@@ -5,40 +5,35 @@
   <div id="loop"><ol><li id="ques"></li></ol><br><br>
   <ol><li id="q1"><button id="op1"></button></li><br><li id="q2"><button id="op2"></button></li><br><li id="q3"><button id="op3"></button></li><br><li id="q4"><button id="op4"></button></li></ol></div>
   <script>
-    function activate1(){
-     return fetch("country-list.json")
+   function activate1() {
+   return fetch("country-list.json")
     .then(r => r.json())
     .then(data => {
       const q = data[Math.floor(Math.random() * data.length)];
-      return `What is the capital of ${q.country}?`;
-    });
-    }  
-    function activate2(){
-     return fetch("country-list.json")
-    .then(r => r.json())
-    .then(data => {
-      const q = data[Math.floor(Math.random() * data.length)];
-      return `${q.capital}?`;
-    });
-    }  
-    while(data in list){
-    activate1().then(question => {
-    document.getElementById("ques").innerHTML = `<li>${question}</li>`;
-    });
-     activate2().then(option => {
-    document.getElementById("op1").innerHTML = `<li>${option}</li>`;
-    });
-      activate2().then(option => {
-    document.getElementById("op2").innerHTML = `<li>${option}</li>`;
-    });
-      activate2().then(option => {
-    document.getElementById("op3").innerHTML = `<li>${option}</li>`;
-    });
-      activate2().then(option => {
-    document.getElementById("op4").innerHTML = `<li>${option}</li>`;
+      return {
+        question: `What is the capital of ${q.country}?`,
+        correct: q.capital,
+        data: data
+      };
     });
     }
-    
+//
+    activate1().then(question => {
+    document.getElementById("ques").innerHTML = `<li>${obj.question}</li>`;
+    const buttons = ["op1", "op2", "op3", "op4"];
+    const correctIndex = Math.floor(Math.random() * 4);
+
+    buttons.forEach((id, i) => {
+    if (i === correctIndex) {
+      document.getElementById(id).innerHTML = `<li>${obj.correct}</li>`;
+    } else {
+      const randomItem =
+        obj.data[Math.floor(Math.random() * obj.data.length)];
+      document.getElementById(id).innerHTML =
+        `<li>${randomItem.capital}</li>`;
+      }
+    });
+   });
   </script>
   </body>
   
