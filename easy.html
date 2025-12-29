@@ -35,20 +35,49 @@
    });
   });
 
-    function evaluate(){
-     document.getElementById("ques").innerText =question;
-
-     const buttons = ["op1", "op2", "op3", "op4"];
-     const correctIndex = Math.floor(Math.random() * 4);
-     buttons.forEach((id, i) => {
-     if (i==correctIndex) {
-      alert("Right Answer");
-     } else {
-      alert("Incorrect answer");
+    function evaluate1(){
+      let ans1=document.getElementById("op1").innerText;
+      activate1();
+      if(ans1===q.capital){
+       alert("Right answer);
          }
-    });
-   }
+      else{
+       alert("wrong answer);
+             }
+         }
 
+     function evaluate2(){
+      let ans2=document.getElementById("op2").innerText;
+      activate1();
+      if(ans2===q.capital){
+       alert("Right answer);
+             }
+      else{
+       alert("wrong answer);
+             }
+         }
+
+     function evaluate3(){
+      let ans3=document.getElementById("op13").innerText =question;
+      activate1();
+      if(ans3===q.capital){
+       alert("Right answer);
+             }
+      else{
+       alert("wrong answer);
+             }
+         }
+
+      function evaluate4(){
+       let ans4=document.getElementById("op1").innerText =question;
+       nactivate1();
+      if(ans4===q.capital){
+       alert("Right answer);
+             }
+      else{
+       alert("wrong answer);
+             }
+         }
     
   </script>
   </body>
