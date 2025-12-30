@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head><title>quiz</title></head>
+  <body>
+  <div id="loop"><ol><li id="ques"></li></ol><br><br>
+  <ol><li id="q1"><button onclick="evaluate1()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate2()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate3()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate4()" id="op4"></button></li></ol></div>
+  <script>
+  let capital = "";
+  function activate1() {
+    return fetch("country-list.json")
+    .then(r => r.json())
+    .then(data => {
+      const q = data[Math.floor(Math.random() * data.length)];
+       capital=q.capital;
+      return {
+        question: `What is the capital of ${q.country}?`,
+        correct: q.capital,
+        data: data
+      };
+     });
+    }
 
+   activate1().then(obj => {
+   document.getElementById("ques").innerText = obj.question;
+
+    const buttons = ["op1", "op2", "op3", "op4"];
+    const correctIndex = Math.floor(Math.random() * 4);
+
+    buttons.forEach((id, i) => {
+    if (i === correctIndex) {
+      document.getElementById(id).innerText = obj.correct;
+     } else {
+      const randomItem =
+        obj.data[Math.floor(Math.random() * obj.data.length)];
+      document.getElementById(id).innerText = randomItem.capital;
+    }
+   });
+  });
+
+  function evaluate1(){
+    let ans1=document.getElementById("op1").innerText;
+    if(ans1===capital){
+      alert("Right answer");
+         }
+    else{
+      alert("wrong answer");
+             }
+    window.location.href="Question2.html";
+         }
+
+  function evaluate2(){
+    let ans2=document.getElementById("op2").innerText;
+    if(ans2===capital){
+       alert("Right answer");
+             }
+    else{
+       alert("wrong answer");
+             }
+    window.location.href="Question2.html";
+         }
+
+  function evaluate3(){
+    let ans3=document.getElementById("op3").innerText;
+    if(ans3===capital){
+      alert("Right answer");
+             }
+    else{
+      alert("wrong answer");
+             }
+    window.location.href="Question2.html";
+         }
+
+  function evaluate4(){
+    let ans4=document.getElementById("op4").innerText;
+     if(ans4===capital){
+      alert("Right answer");
+             }
+    else{
+      alert("wrong answer");
+             }
+    window.location.href="Question4.html";
+         }
+    
+ 
+  </script>
+  </body>
+  
+</html>
