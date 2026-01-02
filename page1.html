@@ -7,9 +7,9 @@
       <button onclick="start()">START</button>
       </div>
     <script>
-      let name1=document.getElementById("naaam").value;
+      let name1=document.getElementById("naaam").InnerText;
       localStorage.getItem("username");
-      console.log(name1.innerText=name);
+      name1.innerText=name;
       function start(){
         window.location.href="easy.html";}
     </script>
