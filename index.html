@@ -4,11 +4,14 @@
 <body>
   <div>Username:<input id="naam"><br><button onclick="move()">SUBMIT</button></div>
 <script>
+  let participants=[];
   function move(){
     let name=document.getElementById("naam").value;
     if(name===""){
       alert("Username cannot be empty");}
     else{
+    participants.push(name);
+    localStorage.setItem("subjects", JSON.stringify(participants));
     window.location.href="page1.html";}
                                           }
 </script>
