@@ -10,8 +10,9 @@
       if(name===""){
         alert("Name must be filled");}
       else{
-        locatStorage.setItem
-        window.location.href("page1.html");}
+        participants.push(name);
+        localStorage.setItem("subjects", JSON.stringify(participants));
+        window.location.href("page1.html");}}
   </script>
 </body>
 </html>
