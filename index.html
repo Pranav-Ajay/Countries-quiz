@@ -4,19 +4,15 @@
 <body>
   <div>Username:<input id="naam"><br><button onclick="move()">SUBMIT</button></div>
 <script>
-  if(localStorage.getItem("subjects")!==""){
-   window.location.href="page1.html";}
   let participants=[];
   function move(){
     let name=document.getElementById("naam").value;
     if(name===""){
       alert("Username cannot be empty");}
-    else if(participants.indexOf(name)===-1){
+    else{
       participants.push(name);
       localStorage.setItem("subjects", JSON.stringify(participants));
       window.location.href="page1.html";}
-    else{
-     alert("Username exists!");}
                                           }
 </script>
 </body>
