@@ -8,6 +8,7 @@
   <script>
   let capital = "";
   let points=0;
+  localStorage.setItem("username",points);
   function activate1() {
     return fetch("country-list.json")
     .then(r => r.json())
