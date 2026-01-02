@@ -9,7 +9,7 @@
     let name=document.getElementById("naam").value;
     if(name===""){
       alert("Username cannot be empty");}
-    elseif(participants.indexof(name)!=NULL){
+    elseif(participants.indexof(name)!=-1){
       alert("Username already in use");}
     else{
     participants.push(name);
