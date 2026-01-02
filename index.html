@@ -2,10 +2,15 @@
 <html>
 <head><title>Login</title></head>
 <body>
-  <div>Username:<input><br><button onclick="move()">SUBMIT</button></div>
+  <div>Username:<input id="naam'><br><button onclick="move()">SUBMIT</button></div>
 <script>
   function move(){
-    window.location.href="page1.html";}
+    let name=document.getElementById("#naam").value;
+    if(name===""){
+      alert("Username cannot be empty");}
+    else{
+      window.location.href="page1.html";}
+                                          }
 </script>
 </body>
 </html>
