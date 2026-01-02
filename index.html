@@ -5,7 +5,7 @@
   <div>Username:<input id="naam"><br><button onclick="move()">SUBMIT</button></div>
 <script>
   function move(){
-    let name=document.getElementById("naam").innerText;
+    let name=document.getElementById("naam").value;
     if(name===""){
       alert("Username cannot be empty");}
     else{
