@@ -10,7 +10,7 @@
       if(name===""){
         alert("Name must be filled");}
       else{
-        localStroage.setItem("username",name);
+        localStorage.setItem("username", name);
         participants.push(name);
         localStorage.setItem("subjects", JSON.stringify(participants));
         window.location.href="page1.html";}}
