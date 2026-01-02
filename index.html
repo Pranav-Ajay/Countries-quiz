@@ -4,6 +4,8 @@
 <body>
   <div>Username:<input id="naam"><br><button onclick="move()">SUBMIT</button></div>
 <script>
+  if(localStorage.getItem("subjects")!==""){
+   window.location.href="page1.html";}
   let participants=[];
   function move(){
     let name=document.getElementById("naam").value;
