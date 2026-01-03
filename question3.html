@@ -7,8 +7,8 @@
   <div>Score:<span id="sco"></span></div>
   <script>
   let sc=document.getElementById("sco");
-  point=localStorage.getItem("username");
-  sc.innerText=point;
+  let points=localStorage.getItem("username");
+  sc.innerText=points;
   let capital = "";
   function activate1() {
     return fetch("country-list.json")
