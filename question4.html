@@ -7,7 +7,7 @@
   <div>Score:<span id="sco">0</span></div>
   <script>
   let sc=document.getElementById("sco");
-  let points=localStorage.getItem("username");
+  let points=Number(localStorage.getItem("username"));
   sc.innerText=points;
   let capital = "";
   function activate1() {
