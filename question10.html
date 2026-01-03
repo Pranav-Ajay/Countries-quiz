@@ -38,6 +38,11 @@
    });
   });
 
+  function score(){
+    points=points+100;
+    let ele=document.getElementById("sco");
+    ele.innerText=points;}
+
   function evaluate1(){
     let ans1=document.getElementById("op1").innerText;
     if(ans1===capital){
