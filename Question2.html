@@ -4,8 +4,12 @@
   <body>
   <div id="loop"><ul><li id="ques">2.</li></ul><br><br>
   <ol><li id="q1"><button onclick="evaluate1()" id="op1"></button></li><br><li id="q2"><button onclick="evaluate2()" id="op2"></button></li><br><li id="q3"><button  onclick="evaluate3()" id="op3"></button></li><br><li id="q4"><button  onclick="evaluate4()" id="op4"></button></li></ol></div>
-  <div>Score:<span id="sco">0</span></div>
+  <div>Score:<span id="sco"></span></div>
   <script>
+  let sc=document.getElementById("sco").innerText;
+  point=localStorage.getItem("username");
+  sc.innerText=point;
+  
   let capital = "";
   function activate1() {
     return fetch("country-list.json")
@@ -39,9 +43,11 @@
   });
 
   function score(){
+    localStorage.getItem("username");
     points=points+100;
     let ele=document.getElementById("sco");
-    ele.innerText=points;}
+    ele.innerText=points;
+    localStorage.setItem("username",points);}
 
   function evaluate1(){
     let ans1=document.getElementById("op1").innerText;
