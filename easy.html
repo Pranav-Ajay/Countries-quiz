@@ -41,9 +41,11 @@
   });
 
   function score(){
+    localStorage.getItem("username");
     points=points+100;
     let ele=document.getElementById("sco");
-    ele.innerText=points;}
+    ele.innerText=points;
+    localStorage.setItem("username",points);}
  
 
   function evaluate1(){
